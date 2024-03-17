@@ -76,7 +76,7 @@ public class MainActivity extends Activity {
     }
 
     private String writeResultsToDisk(String jsonResults) {
-        File outputDir = Environment.getExternalStorageDirectory();
+        File outputDir = getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS);
         try {
             File outputFile = File.createTempFile("device_data", ".json", outputDir);
             FileOutputStream stream = new FileOutputStream(outputFile);
